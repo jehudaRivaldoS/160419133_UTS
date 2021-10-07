@@ -23,11 +23,6 @@ class DialogFragment : BottomSheetDialogFragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        btnSuccess.setOnClickListener {
-            val action = DialogFragmentDirections.actionDialogBack()
-            Navigation.findNavController(it).navigate(action)
-        }
     }
 
 }

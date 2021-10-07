@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,13 +29,13 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ListRecipeModel::class.java)
         viewModel.refresh()
 
-        recView.layoutManager = LinearLayoutManager(context)
-        recView.adapter = recipeListAdapter
+        recView1.layoutManager = LinearLayoutManager(context)
+        recView1.adapter = recipeListAdapter
 
-        refreshLayout.setOnRefreshListener {
-            recView.visibility = View.GONE
+        rLayout.setOnRefreshListener {
+            recView1.visibility = View.GONE
             viewModel.refresh()
-            refreshLayout.isRefreshing = false
+            rLayout.isRefreshing = false
         }
         observeViewModel()
     }

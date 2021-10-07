@@ -13,6 +13,13 @@
         android:title="Add"
         app:showAsAction="always" />
     <item
+        android:id="@+id/itemRecipe"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_food_bank_24"
+        android:title="My Recipe"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/itemProfile"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile"

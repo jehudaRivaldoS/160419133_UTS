@@ -72,4 +72,9 @@
             android:id="@+id/actionDialogBack"
             app:destination="@id/recipeFragment" />
     </dialog>
+    <fragment
+        android:id="@+id/itemRecipe"
+        android:name="com.example.a160419133_uts.view.MyRecipeFragment"
+        android:label="fragment_my_recipe"
+        tools:layout="@layout/fragment_my_recipe" />
 </navigation>

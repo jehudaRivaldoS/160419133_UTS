@@ -9,7 +9,7 @@ class ProfileModel : ViewModel() {
 
     fun refreshP()
     {
-        val profile =
+        /*val profile =
                 Profile("1",
                         "c",
                         "jehuda0911@gmail.com",
@@ -17,6 +17,6 @@ class ProfileModel : ViewModel() {
 
         val profiles = arrayListOf<Profile>(profile)
 
-        profileLD.value = profiles
+        profileLD.value = profiles*/
     }
 }

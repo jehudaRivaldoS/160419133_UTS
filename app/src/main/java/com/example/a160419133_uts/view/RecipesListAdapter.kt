@@ -30,9 +30,9 @@ class RecipesListAdapter(val recipeList: ArrayList<Recipes>):RecyclerView.Adapte
         holder.view.imgRecipe.loadImage(recipeList[position].url.toString(), holder.view.progressBar)
 
         holder.view.btnView.setOnClickListener {
-            val id = recipeList[position].id.toString()
+            /*val id = recipeList[position].id.toString()
             val action = HomeFragmentDirections.actionHomeToRecipe()
-            Navigation.findNavController(it).navigate(action)
+            Navigation.findNavController(it).navigate(action)*/
         }
     }
 

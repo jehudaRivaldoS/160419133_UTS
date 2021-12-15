@@ -11,7 +11,7 @@ class ListMyRecipe: ViewModel() {
 
     fun refreshR()
     {
-        val recipe1 =
+        /*val recipe1 =
             MyRecipes("1",
                 "Ayam goreng lengkuas",
                 "ayam, sereh, daun salam, daun jeruk, air, garam halus, bumbu instan ayam lengkuas",
@@ -25,6 +25,6 @@ class ListMyRecipe: ViewModel() {
                 "https://i0.wp.com/tastynesia.com/wp-content/uploads/2019/12/Resep-Nasi-Goreng-Sosis.jpg")
 
         val recipe = arrayListOf<MyRecipes>(recipe1,recipe2)
-        myRecipeLD.value = recipe
+        myRecipeLD.value = recipe*/
     }
 }

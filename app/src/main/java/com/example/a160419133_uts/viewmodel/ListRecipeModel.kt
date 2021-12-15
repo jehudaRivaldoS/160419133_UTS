@@ -37,7 +37,7 @@ class ListRecipeModel(application: Application) : AndroidViewModel(application) 
         stringRequest.tag = TAG
         queue?.add(stringRequest)*/
 
-        val recipe1 =
+        /*val recipe1 =
                 Recipes("1",
                         "Bolu Panggang",
                         "Gula, Telur, Baking Powder, Tepung Terigu, Margarin Cair, Vanili",
@@ -56,7 +56,7 @@ class ListRecipeModel(application: Application) : AndroidViewModel(application) 
                         "Masukan minyak, bawang, telur orak arik dan masukan air Mie garam dan saos campur dan selesai",
                         "https://img-global.cpcdn.com/recipes/eb97feadf4b169ab/751x532cq70/mie-goreng-sosis-foto-resep-utama.jpg")
         val recipe = arrayListOf<Recipes>(recipe1,recipe2,recipe3)
-        recipeLD.value = recipe
+        recipeLD.value = recipe*/
     }
     /*override fun onCleared() {
         super.onCleared()

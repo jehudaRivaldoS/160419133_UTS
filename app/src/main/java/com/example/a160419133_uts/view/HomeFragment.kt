@@ -9,12 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.a160419133_uts.R
-import com.example.a160419133_uts.viewmodel.ListRecipeModel
+import com.example.a160419133_uts.viewmodel.ListRecipeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-    private lateinit var viewModel: ListRecipeModel
-    private val recipeListAdapter = RecipesListAdapter(arrayListOf())
+   private lateinit var viewModel:ListRecipeViewModel
+   private val recipeListAdapter = RecipesListAdapter(arrayListOf())
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +27,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(ListRecipeModel::class.java)
+        viewModel = ViewModelProvider(this).get(ListRecipeViewModel::class.java)
         viewModel.refresh()
 
         recView1.layoutManager = LinearLayoutManager(context)
@@ -42,6 +43,14 @@ class HomeFragment : Fragment() {
     fun observeViewModel(){
         viewModel.recipeLD.observe(viewLifecycleOwner, Observer {
             recipeListAdapter.updateRecipesList(it)
+            if(it.isEmpty())
+            {
+
+            }
+            else
+            {
+                
+            }
         })
     }
 }

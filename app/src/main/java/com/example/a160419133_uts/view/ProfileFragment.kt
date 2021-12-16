@@ -5,14 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.a160419133_uts.R
 import com.example.a160419133_uts.util.loadImage
-import com.example.a160419133_uts.viewmodel.ProfileModel
 import kotlinx.android.synthetic.main.fragment_profile.*
-import kotlinx.android.synthetic.main.recipe_list_item.*
 
 class ProfileFragment : Fragment() {
     override fun onCreateView(

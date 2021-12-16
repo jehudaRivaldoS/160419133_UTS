@@ -7,10 +7,10 @@ import androidx.room.RoomDatabase
 import com.example.a160419133_uts.util.MIGRATION_1_2
 import com.example.a160419133_uts.util.MIGRATION_2_3
 
-@Database(entities = arrayOf(Recipes::class), version = 4)
+@Database(entities = arrayOf(Recipes::class), version = 3)
 abstract class RecipeDatabase: RoomDatabase()
 {
-    abstract fun RecipeDao(): Recipes
+    abstract fun recipeDao(): RecipeDao
 
     companion object
     {
@@ -19,7 +19,7 @@ abstract class RecipeDatabase: RoomDatabase()
 
         private fun buildDatabase(context: Context) = Room.databaseBuilder(
                 context.applicationContext, RecipeDatabase::class.java, "recipedb"
-        ).addMigrations(MIGRATION_1_2, MIGRATION_2_3).build()
+        ).addMigrations(MIGRATION_1_2,MIGRATION_2_3).build()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK)
         {

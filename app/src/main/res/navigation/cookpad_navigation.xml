@@ -39,6 +39,9 @@
         <action
             android:id="@+id/actionRecipeUpdate"
             app:destination="@id/updateRecipeFragment" />
+        <argument
+            android:name="uuid"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -62,6 +65,9 @@
         <action
             android:id="@+id/actionDialog"
             app:destination="@id/dialogFragment" />
+        <argument
+            android:name="uuid"
+            app:argType="integer" />
     </fragment>
     <dialog
         android:id="@+id/dialogFragment"

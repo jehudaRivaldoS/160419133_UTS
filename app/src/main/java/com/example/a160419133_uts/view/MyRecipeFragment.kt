@@ -9,13 +9,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.a160419133_uts.R
-import com.example.a160419133_uts.viewmodel.ListMyRecipe
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.a160419133_uts.viewmodel.ListRecipeViewModel
 import kotlinx.android.synthetic.main.fragment_my_recipe.*
 
 
 class MyRecipeFragment : Fragment() {
-    private lateinit var viewModel: ListMyRecipe
+    private lateinit var viewModel: ListRecipeViewModel
     private val myRecipeListAdapter = MyRecipeAdapter(arrayListOf())
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -26,23 +25,30 @@ class MyRecipeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(ListMyRecipe::class.java)
-        viewModel.refreshR()
+        viewModel = ViewModelProvider(this).get(ListRecipeViewModel::class.java)
+        viewModel.refresh()
 
         recycler.layoutManager = LinearLayoutManager(context)
         recycler.adapter = myRecipeListAdapter
 
         refresh.setOnRefreshListener {
             recycler.visibility = View.GONE
-            viewModel.refreshR()
+            viewModel.refresh()
             refresh.isRefreshing = false
         }
         observeViewModel()
     }
     fun observeViewModel(){
-        viewModel.myRecipeLD.observe(viewLifecycleOwner, Observer {
+        viewModel.recipeLD.observe(viewLifecycleOwner, Observer {
             myRecipeListAdapter.updateMyRecipesList(it)
+            if(it.isEmpty())
+            {
+
+            }
+            else
+            {
+
+            }
         })
     }
 }

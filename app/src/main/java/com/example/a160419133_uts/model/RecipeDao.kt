@@ -16,6 +16,9 @@ interface RecipeDao {
     @Query("UPDATE recipes SET name= :name, bahan = :bahan, howToMakeIt = :how, url = :url WHERE uuid = :id")
     suspend fun update(name:String, bahan:String, how:String, url:String, id: Int)
 
+    @Query("DELETE FROM recipes WHERE uuid= :id")
+    suspend fun delete(id:Int)
+
     @Delete
     suspend fun deleteRecipes(recipes: Recipes)
 }
